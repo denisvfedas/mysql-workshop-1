@@ -1,0 +1,8 @@
+mysql-ctl start
+mysql -uroot
+
+create database decodemtl_test;
+
+create database decodemtl_addressbook;
+
+drop database decodemtl_test;
