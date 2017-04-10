@@ -1,0 +1,52 @@
+mysql-ctl start
+mysql -uroot
+
+create database decodemtl_test;
+
+create database decodemtl_addressbook;
+
+drop database decodemtl_test;
+
+show databases;
+
+use decodemtl_addressbook;
+
+create table Account (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     email VARCHAR(255),
+     password VARCHAR(40),
+     createOn DATETIME,
+     midifiedOn DATETIME
+);
+
+CREATE TABLE AddressBook (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     accoundId INT,
+     name VARCHAR(255),
+     createOn DATETIME,
+     midifiedOn DATETIME
+);
+
+CREATE TABLE Entry (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     addressBookId INT,
+     firstName VARCHAR(255),
+     lastName VARCHAR(255),
+     birthday DATETIME,
+     type ENUM('1', '2'),
+     subtype ENUM('1', '2'),
+     contentLineOne VARCHAR(255),
+     contentLineTwo VARCHAR(255),
+     contentLineThree VARCHAR(255),
+     contentLineFour VARCHAR(255),
+     contentLineFive VARCHAR(255)
+);
+
+CREATE TABLE Test (
+     id INT,
+     name  VARCHAR(255)
+);
+
+DROP TABLE Test;
+
+
