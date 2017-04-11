@@ -1,1 +1,0 @@
-denisvfedas:~/mysql-workshop-1/schema (master) $ mysql -uroot
